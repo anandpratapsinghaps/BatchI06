@@ -1,3 +1,0 @@
-This is a test file.
-My name is sandip.
-This is an examle how to create file.
