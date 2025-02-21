@@ -1,2 +1,0 @@
-This is a test example two.
-This is an example of git.
