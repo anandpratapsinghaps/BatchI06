@@ -3,7 +3,12 @@ constrains :-
 2)check :- it is used to check the value or condition.
 example:- age should be greater than 18 to vote
 3)default
-
+4)unique key:- in this we cannot enter duplicate value
+5)not null:- In this the value cannot be null.
+6)Foreign key:- It is a reference key to another table.
+---------------------------------------------------------------
+create table bank(accno int primary key,name varchar(30),balance float);
+-----------------------------------------------------------------------
 CREATE TABLE student1 (
     Id INT PRIMARY KEY ,
     name VARCHAR(255) NOT NULL,
@@ -41,13 +46,26 @@ Foreign key
 ------------------------
 parent table or Master table
 -----------------------------------------------
-create table bank(accno int primary key,name varchar(30),balance float);
+create table bank(accno int primary key, name varchar(30),balance float);
 ------------------------------------------------------------------------------
 child table
 -------------------------
 CREATE TABLE bankcustomer (
-accno int,
+	accno int,
     FOREIGN KEY (accno) REFERENCES bank(accno),
     FirstName varchar(255),
     Age int);
---------------------------------------------------------
+----------------------------------------------------------------------------------
+CREATE TABLE bankcustomer (
+	accno int,
+    FOREIGN KEY (accno) REFERENCES bank(accno) ON DELETE CASCADE,
+
+    FirstName varchar(255),
+    Age int);
+-------------------------------------------------------------------
+CREATE TABLE bankcustomer (
+	accno int,
+    FOREIGN KEY (accno) REFERENCES bank(accno) ON update CASCADE,
+    FirstName varchar(255),
+    Age int);
+-------------------------------------------------------------------------
