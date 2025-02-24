@@ -4,10 +4,10 @@ To see the databases
 1)show databases;
 -----------------------------------------------------
 to create database
-2)create database daimler;
+2)create database batchi06;
 --------------------------------------------------------
 to goto the database
-3)use daimler;
+3)use batchi06;
 -------------------------------------------------------------------------------------------
 to clear the screen
 system cls;
@@ -66,12 +66,25 @@ we cannot enter duplicate values nor we can leave the field empty.
 insert into fare(fare,flight_date,flight_number) values('hyd-bang','12-jul-2024','air-207');
 
 ALTER TABLE fare MODIFY id INT NOT NULL AUTO_INCREMENT;
-ALTER TABLE fare MODIFY fare INT NOT NULL;
+ALTER TABLE fare MODIFY fare varchar(30) NOT NULL;
 
 -----------------------------------------------------------------------------------------------------------
-time stamp (2024-07-10 5:00)
+time stamp ('2024-07-10 5:00')
+date ('2025-02-24')
 ---------------------------------------------------------
 create table booking_record (id INT primary key AUTO_INCREMENT,
+booking_date date, 
+destination VARCHAR(255), 
+price VARCHAR(255), 
+flight_date VARCHAR(255), 
+flight_number VARCHAR(255),
+origin VARCHAR(255), 
+status VARCHAR(255));
+--------------------------------------------------------------------------------------
+insert into booking_record(booking_date,destination,price,flight_date,flight_number,origin,status) values('2025-02-24','Pune','Rs 5000','12-dec-2024','air-206','Hyd','yes');
+
+-----------------------------------------------------------------------------------
+create table booking_record1(id INT primary key AUTO_INCREMENT,
 booking_date timestamp, 
 destination VARCHAR(255), 
 price VARCHAR(255), 
@@ -79,8 +92,8 @@ flight_date VARCHAR(255),
 flight_number VARCHAR(255),
 origin VARCHAR(255), 
 status VARCHAR(255));
------------------------------------------------------------------------------------
-insert into booking_record(booking_date,destination,price,flight_date,flight_number,origin,status) values('2024-12-12 10:00','Pune','Rs 5000','12-dec-2024','air-206','Hyd','yes');
+----------------------------------------------------------------------
+insert into booking_record(booking_date,destination,price,flight_date,flight_number,origin,status) values('2025-02-24 10:10','Pune','Rs 5000','12-dec-2024','air-206','Hyd','yes');
 ---------------------------------------------------------------------------------------
 Date
 ---------------
