@@ -2,7 +2,7 @@ constrains :-
 1)Primary key :- unique key + not null
 2)check :- it is used to check the value or condition.
 example:- age should be greater than 18 to vote
-3)default
+3)default :- If you don't enter anything the default value will be taken.
 4)unique key:- in this we cannot enter duplicate value
 5)not null:- In this the value cannot be null.
 6)Foreign key:- It is a reference key to another table.
