@@ -6,9 +6,9 @@ example:- age should be greater than 18 to vote
 4)unique key:- in this we cannot enter duplicate value
 5)not null:- In this the value cannot be null.
 6)Foreign key:- It is a reference key to another table.
----------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 create table bank(accno int primary key,name varchar(30),balance float);
------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 CREATE TABLE student1 (
     Id INT PRIMARY KEY ,
     name VARCHAR(255) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE student1 (
     Address varchar(50),
      Salary INT check (salary > 20000));
 
------------------------
+-------------------------------------------------------------------------------------------------
 CREATE TABLE Persons11 (
     ID int NOT NULL,
     LastName varchar(255) NOT NULL,
