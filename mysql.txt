@@ -101,7 +101,7 @@ SELECT DATE_SUB(CURDATE(), INTERVAL 5 DAY) AS ResultDate;
 SELECT DATE_ADD(CURDATE(), INTERVAL 5 DAY) AS ResultDate;
 SELECT STR_TO_DATE('12-13-2024', '%m-%d-%Y');
 SELECT MONTHNAME('2024-12-13');---->December
-SELECT DAYNAME('2024-12-13');----->Friday
+SELECT DAYNAME('2025-02-24');----->Friday
 SELECT WEEK('2024-12-13');----->50
 SELECT LAST_DAY('2024-12-13'); -----> 2024-12-31
 SELECT DATEDIFF('2024-12-20', '2024-12-13');---->7
@@ -113,10 +113,10 @@ SELECT YEAR('2024-12-13'); --> 2024
 SELECT CURDATE(); -->2024-12-13
 SELECT CURTIME(); -->14:30:00
 SELECT NOW(); --> 2024-12-13 14:30:00
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 create table orders(order_id int primary key,order_date date);
-insert into orders values(102,'2024-12-10');
-----------------------------------------------------------------------------------------------------
+insert into orders values(102,'2025-02-24');
+----------------------------------------------------------------------------------------------
 SELECT order_id,order_date, 
   DATE_ADD(order_date, INTERVAL 7 DAY) AS delivery_date, 
   DAYNAME(order_date) AS order_day 
@@ -314,7 +314,7 @@ select address, max(salary) from student group by address having max(salary)>450
 select address, sum(salary) as total_salary from student2 group by address having sum(salary) > 20000;
 -----------------------------------------------------------------------------------
 15)aggregate function
-count(),sum(),avg(),min(),max(),first(),last()
+count(),sum(),avg(),min(),max()
 ---------------------------------------------------------------------
 i)select count(*) from student;
 first record  :- select name from student limit 1;
@@ -2272,7 +2272,51 @@ You can selectively stage parts of files or specific files to ensure only intend
 all three will be delete
 45)variable name declaration in sql--no numeric,no space in between the variables
 -----------------------------------------------------------------------------------------------------------------
+mysql> select * from address;
++-------+-----------+------------+
+| accno | city      | state      |
++-------+-----------+------------+
+|  1001 | hydrabad  | AP         |
+|  1002 | Bangalore | karnataka  |
+|   103 | pune      | maharastra |
++-------+-----------+------------+
+3 rows in set (0.00 sec)
 
+mysql> select * from bankcustomer;
++-------+-----------+------+
+| accno | FirstName | Age  |
++-------+-----------+------+
+|  1001 | sandip    |   45 |
+|  1001 | sandip    |   45 |
+|  1002 | sunil     |   45 |
+|  1002 | sunil     |   45 |
+|   103 | kiran     |   55 |
++-------+-----------+------+
+5 rows in set (0.00 sec)
+
+mysql> select * from bank;
++-------+-------+---------+
+| accno | name  | balance |
++-------+-------+---------+
+|   103 | HDFC  |  7900.5 |
+|  1001 | ICICI |  8900.5 |
+|  1002 | SBI   |  9900.5 |
++-------+-------+---------+
+3 rows in set (0.02 sec)
+
+mysql> select a.accno,a.name,a.balance,b.firstname,b.age,c.city,c.state from bank a,
+    -> bankcustomer b,address c where a.accno=b.accno and a.accno=c.accno;
++-------+-------+---------+-----------+------+-----------+------------+
+| accno | name  | balance | firstname | age  | city      | state      |
++-------+-------+---------+-----------+------+-----------+------------+
+|   103 | HDFC  |  7900.5 | kiran     |   55 | pune      | maharastra |
+|  1001 | ICICI |  8900.5 | sandip    |   45 | hydrabad  | AP         |
+|  1001 | ICICI |  8900.5 | sandip    |   45 | hydrabad  | AP         |
+|  1002 | SBI   |  9900.5 | sunil     |   45 | Bangalore | karnataka  |
+|  1002 | SBI   |  9900.5 | sunil     |   45 | Bangalore | karnataka  |
++-------+-------+---------+-----------+------+-----------+------------+
+5 rows in set (0.01 sec)
+------------------------------------------------------------------------------------------------------------
 
 
 
