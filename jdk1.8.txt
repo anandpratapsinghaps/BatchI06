@@ -1,5 +1,3 @@
-java programs by ashok it
----------------------------------
 Java 1.8 features
 --------------------------
 1)Java is Object Oriented programming Language.
