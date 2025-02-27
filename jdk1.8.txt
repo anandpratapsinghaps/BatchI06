@@ -2188,6 +2188,72 @@ public static void main(String[] args) {
 }
 
 -------------------------------------------------------------------
+example-2
+--------------------
+package Thursday;
+
+import java.util.Scanner;
+
+abstract class bank1
+{
+abstract void register();
+abstract void deposite();
+abstract void withdraw();
+bank1(int a)
+{
+	System.out.println("This is a bank constructor" );
+	System.out.println("the value of a is "+a);
+}
+}
+public class BankAbstarct extends bank1
+{
+	int accno;
+	String name;
+	float bal,deposite,withdraw;
+	Scanner ob=new Scanner(System.in);
+	BankAbstarct(int a) {
+		super(a);
+		
+	}
+
+	@Override
+	void register() {
+		System.out.println("enter accno,name and initial balance");
+		accno=ob.nextInt();
+		name=ob.next();
+		bal=ob.nextFloat();
+	}
+
+	@Override
+	void deposite() {
+		System.out.println("Enter the amount want to deposite");
+		deposite=ob.nextFloat();
+		bal=bal+deposite;
+		System.out.println("The final balance is "+bal);
+	}
+
+	@Override
+	void withdraw() {
+		System.out.println("the balance is "+bal);
+		System.out.println("Enter the amount want to withdraw");
+		withdraw=ob.nextFloat();
+		if(bal-withdraw >= 1000)
+		{
+			bal=bal-withdraw;
+			System.out.println("The final balance is"+bal);
+		}
+		else
+			System.out.println("cannot withdraw balance is low");
+	}
+	public static void main(String[] args) 
+	{
+		BankAbstarct obj=new BankAbstarct(10);
+		obj.register();
+		obj.deposite();
+		obj.withdraw();
+	}
+}
+-------------------------------------------------------------------------------------------------
 package Day4;
 abstract class Student
 {
