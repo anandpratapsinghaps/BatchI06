@@ -2067,6 +2067,8 @@ static keyword
 final keyword
 ---------------------------------------------------------------------------------------------------
 polymorphism:-
+1)runtime polymorphism:-Method Overriding
+2)compile time polymorphism :-Method Overloading
 Method Overloading :- compile time Polymorphism. we need one class.
 The method name is same but the return type and parameter has different data type.
 example:-
@@ -2133,7 +2135,8 @@ public class MethodOverriding extends Parent
 -----------------------------------------------------------------
 Here in the parent class we have the display().
 In the child class we have display().We are creating object of the child class.
-The child class display() is overriding on the parent class display().The parent class display() is hidden.
+The child class display() is overriding on the parent class display().
+The parent class display() is hidden.
 ----------------------------------------------------------------------------
 Abstract class
 ------------------------
