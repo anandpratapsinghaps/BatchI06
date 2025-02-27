@@ -1,3 +1,5 @@
+java programs by ashok it
+---------------------------------
 Java 1.8 features
 --------------------------
 1)Java is Object Oriented programming Language.
@@ -341,10 +343,10 @@ public class LCMCalculator {
 ---------------------------------------------------------------------------------------------------
 Class :- A class is a known as object framework.
 A class contains variables and methods.
---------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 Object is a reference pointer to the class.
 We can access the variables and methods of a class using Object.
---------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 Assignment-1
 -------------------
 wap to enter employee's data and display it.
@@ -1307,6 +1309,53 @@ public class Marks extends Student
 	}
 }
 ---------------------------------------------------------------------------------------------
+example-2
+----------------------
+package Thursday;
+import java.util.*;
+class studentclass
+{
+int rollno;
+String name,address;
+public studentclass(int rollno, String name, String address) 
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+void display()
+{
+System.out.println("the rollno is "+rollno+"The name is "+name+"The address is "+address);
+}
+}
+public class InheritanceDemo extends studentclass
+{
+	int phy,chem,bio,total,avg;
+
+	public InheritanceDemo(int rollno, String name, String address, int phy, int chem, int bio) 
+	{
+		super(rollno, name, address);//parent class constructor will execute first
+		this.phy = phy;
+		this.chem = chem;
+		this.bio = bio;
+		this.total = phy+chem+bio;
+		this.avg =total/3;
+	}
+	void display()
+	{
+		super.display();
+		System.out.println("the physics marks is "+phy);
+		System.out.println("the chemistry marks is "+chem);
+		System.out.println("the biology marks is "+bio);
+		System.out.println("the physics marks is "+total);
+		System.out.println("the physics marks is "+avg);
+			}
+	public static void main(String[] args) {
+		InheritanceDemo obj=new InheritanceDemo(101,"sandip","bang",88,66,93);
+		obj.display();
+	}
+}
+-----------------------------------------------------------------
 package day3;
 
 public class Student 
