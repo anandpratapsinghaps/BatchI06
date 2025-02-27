@@ -1255,6 +1255,10 @@ There are 5 types of Inheritance.
 ------------------------------------------------------------------------------------
 we use the keyword extends to inherite the parent class into the child class.
 we use the keyword super to access the parent class variables and methods into the child class.
+1)The parent class should not be public
+2)We will create object of the child class
+3) The class name should be the child class name which contain the main ()
+4)parent class constructor will execute first then the child class constructor
 -------------------------------------------------------------------------------------
 eample-1
 ---------------------
