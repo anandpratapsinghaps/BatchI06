@@ -2075,6 +2075,13 @@ example:-
 int sum(int a, int b);
 float sum(float a, float b);
 --------------------------------------------------------
+Encapsulation:-Protecting of data by using private and protected access specifier.
+We can create a fully encapsulated class in Java by making all the data members of the class private. Now we can use setter and getter methods to set and get the data in it.
+It is a way to achieve data hiding in Java because other class will not be able to access the data through the private data members.
+-------------------------------------------------------------------------
+Abstraction :- is a process of hiding the implementation details and showing only functionality to the user.
+Another way, it shows only essential things to the user and hides the internal details, for example, sending SMS where we type the text and send the message. We do not know the internal processing about the message delivery.
+-------------------------------------------------------------------
 program-15
 -------------------
 package Wednesday;
@@ -2361,16 +2368,14 @@ Create a abstract class bank
 having abstract methods register(),apply for loan, credit card, debit card.
 create a child class customer .override all the methods and create object.
 --------------------------------------------------------------------------------------------
-
 Interface:-
 It is similar to abstract class but it only contains abstract methods no concrete methods. we don't use the keyword abstract in this.
 We cannot create object for an interface.
 We have to implement the interface into a child class.
 We have to override the abstract methods into a child class and create object for the child class.
 By interface java performs the multiple Inheritance.
-we can declare a variable inside a interface .this is by default static(we can access it without object )
-and final(cann't be changed)
---------------------------------------------------------------------------------------------------
+we can declare a variable inside a interface .this is by default static(we can access it without object ) and final(cann't be changed)
+-------------------------------------------------------------------------------------------
 progarm-19
 -----------------------
 package Wednesday;
