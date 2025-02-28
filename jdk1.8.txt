@@ -2459,6 +2459,7 @@ void display4();
 	}
  }
  --------------------------------------------------------------------------------------------------
+jdk21---->jre---->JVM
  static :- we can declare a variable as static, method as static, we can have static block and we can have static class.
 We can access it without creating an object.
 We can access it with the help of the class name.
@@ -3415,6 +3416,28 @@ StringBuffer takes more time to execute than StringBuilder.
 Thread synchronized means one thread complete excecution then the next thread will start execute.
 example :-ATM (one person will do the transaction then the second person will do the transaction).
 ---------------------------------------------------------------------------------------------------------
+public class StringBufferDemo 
+{
+public static void main(String[] args) 
+{
+StringBuilder s1=new StringBuilder("My name ")	;
+StringBuilder s2=new StringBuilder("is sandip ")	;
+StringBuilder s3=new StringBuilder("I am 40 years old");
+System.out.println(s1.append(s2));
+System.out.println(s1.append(s3));
+System.out.println(s1);//mutable the value of the string is changed
+s1.setCharAt(0, 'm');
+System.out.println(s1);
+s1.setLength(20);
+System.out.println(s1);
+System.out.println(s1.insert(20, " am a java Trainer"));
+System.out.println(s1.delete(21, 25));
+System.out.println(s1.reverse());
+System.out.println(s1.reverse());
+System.out.println(s1.capacity());
+}
+}
+---------------------------------------------------------------------------------------------
 Collection Framework
 ----------------------------------------------------------------
 int a[]=new int[5]; ---------------array the size is fixed.
