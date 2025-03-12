@@ -52,7 +52,7 @@ t2.start();
 1)byte range---
 	(-128 to 127)
 2) user defined exceptions that extends exception class----
-	(unchecked exception)
+	(checked exception)
 3)which of the following is not checked exception---
 	(ArthimaticException)
 4) Binary Search Time Complexity---
