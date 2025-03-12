@@ -1,0 +1,52 @@
+1)how to initialize a git directory-----init() <directory>
+2)how to delete a table----drop table <table name>
+3)salary between 40000 and 100,000
+4)A user-defined exception that extends the Exception class is a checked exception in Java.
+5)final is immutable
+6)what is the size of read and write operation of iostream---2 byte
+7)<%=5+4%> ----expression tag
+8)which command is use to add files and automatically send to staging area-----git add --all
+9)which technology we use for backend business logic in java--spring boot
+10)which jsp command is similar to out.println() in java but does not require  exception handling?----<%= %>
+11)in the <!int a 
+12)Integer a=new Intereger(5);
+Integer b=new Intereger(4);
+Integer result =a*b;
+ans:-autoboxing
+13)where salary isNull
+14)default branch in git is Master
+15)how to iterate map using which iterators---forEach, iterator
+16)which method is used to retrive an array of string values from a request parameter ----request.getParameterValues()
+17)public static void main(String args[])
+18)public class FirstDemo 
+{
+public static void main(String[] args) {
+	Thread t1=new Thread();
+	System.out.println(t1.isAlive());
+}
+}
+------false
+19)to delete data from the browser----delete(),destroy()
+20)public class FirstDemo 
+{
+public static void main(String[] args) {
+	Thread t1=new Thread();
+	System.out.println(t1.isAlive());
+}
+}
+-----Thread[Thread-0,5,main]
+21)alter table drop column <column name> --delete column from the table.
+22)<%! int a = 6; %>  <%-- Instance variable (class-level) --%>
+
+    <%
+        int a = 5;  %>// Local variable (shadows instance variable)
+        <%int b = 5;  // Local variable
+    %>
+
+    <h2>Multiplication Result: <%= a * b %></h2>
+ans :---25
+23)Thread A created Object of thread A
+Thread B sleep(2000);
+
+1)Thread A execute ,wait for 2 sec
+2)lock object b then wait for 2 sec
