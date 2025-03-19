@@ -1,0 +1,62 @@
+menu.component.ts
+-------------------------------------------------------------------
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'palak',
+  template :`
+ MENU<ul>
+ <li><a [routerLink]="['/login']">Login Page</a></li>
+ <li><a [routerLink]="['/register']">Register Page</a></li>
+ <li><a [routerLink]="['/contact']">Contact Page</a></li>
+ <li><a [routerLink]="['/service']">Service Page</a></li>
+ </ul><hr>
+<router-outlet></router-outlet> `
+})
+
+export class MenuComponent {
+
+}
+----------------------------------------------------------------------------------------------------------------------------------
+app.module.ts
+-------------------------------------
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { ServiceComponent } from './service/service.component';
+import { MenuComponent } from './menu/menu.component';
+import {Routes,RouterModule} from '@angular/router'; 
+
+const appRoutes: Routes =                  
+[
+  {path:'login',component:LoginComponent},
+  {path:'register',component:AppComponent},
+  {path:'contact',component:ContactComponent},
+  {path:'service',component:ServiceComponent},
+  
+];
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ContactComponent,
+    LoginComponent,
+    ServiceComponent,
+    MenuComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
+  ],
+  providers: [],
+  bootstrap: [MenuComponent]
+})
+export class AppModule { }
+----------------------------------------------------------------------------------------
